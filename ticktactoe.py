@@ -1,29 +1,32 @@
 import random
 class Tic:
+    l1=[" "," "," ","|"," "," "," ","|"," "," "]
+    l2=[" "," "," ","|"," "," "," ","|"," "," "]
+    l3=[" "," "," ","|"," "," "," ","|"," "," "]
+    a= "_____________"
     
     
-    
-    def design(self,l1,l2,l3,a):
-        for i in l1:
+    def design(self):         # 1st fun
+        for i in self.l1:
             print(i,end="")
         print("")
-        print(a)
+        print(self.a)
         print("")
 
-        for i in l2:
+        for i in self.l2:
             print(i,end="")
         print("")
-        print(a)
+        print(self.a)
         print("")
 
-        for i in l3:
+        for i in self.l3:
             print(i,end="")
         print("")
         
 
        
     def details(self,p1,level):
-        print("-------Plese Enter your name------")
+        print("-------Plese Enter your name------")               # 2nf fun
         p1=input("")
         print("""-------Select Level you want to play---------
                 Enter 1 for  ----- Easy
@@ -40,88 +43,85 @@ class Tic:
             print("----------Please try again----------")
             details()
 
-    #list1=[1,2,3,4,5,6,7,8,9]
-    def easy(list1):
-        while(l1[1]==" " or l1[5]==" " or l1[9]==" " or l2[1]==" " or l2[5]==" " or l2[9]==" " or l3[1]==" " or l3[5]==" " or l3[9]==" " ):
-            
-            print("Enter number from  " list1)              
+    
+    list1=[1,2,3,4,5,6,7,8,9]
+
+
+    def easy(self):                        # 3rd fun
+        #while(self.l1[1]==" " or self.l1[5]==" " or self.l1[9]==" " or self.l2[1]==" " or self.l2[5]==" " or self.l2[9]==" " or self.l3[1]==" " or self.l3[5]==" " or self.l3[9]==" " ):
+        for i in range(0,4):    
+            print("Enter number from  ", self.list1)              
             
 
             fault=int(input())
 
             if(fault==1):
-                l1[1]="O"
-            elif(fault==2):
-                l1[5]="O"
-            elif(fault==1):
-                l1[9]="O"
-            elif(fault==1):
-                l2[1]="O"
-            elif(fault==1):
-                l2[5]="O"
-            elif(fault==1):
-                l2[9]="O"
-            elif(fault==1):
-                l3[1]="O"
-            elif(fault==1):
-                l3[5]="O"
-            elif(fault==1):
-                l3[9]="O"
+                self.l1[1]="O"
+            if(fault==2):
+                print("asdfghgfdsasdfgh")
+                self.l1[5]="O"
+            if(fault==1):
+                self.l1[9]="O"
+            if(fault==1):
+                self.l2[1]="O"
+            if(fault==1):
+                self.l2[5]="O"
+            if(fault==1):
+                self.l2[9]="O"
+            if(fault==1):
+                self.l3[1]="O"
+            if(fault==1):
+                self.l3[5]="O"
+            if(fault==1):
+                self.l3[9]="O"
             else:
-                print("wrong input")
+                print("wrong inputtttttttttttttttt" ,fault)
             
-            design(self,l1,l2,l3,a)
+            print(self.design())
 
 
-            list1.remove(fault)
+            self.list1.remove(fault)
 
-            fault1=random.choice(list1)
+            fault1=random.choice(self.list1)
 
             if(fault1==1):
-                l1[1]="X"
-            elif(fault1==2):
-                l1[5]="X"
-            elif(fault1==1):
-                l1[9]="X"
-            elif(fault1==1):
-                l2[1]="X"
-            elif(fault1==1):
-                l2[5]="X"
-            elif(fault1==1):
-                l2[9]="X"
-            elif(fault1==1):
-                l3[1]="X"
-            elif(fault1==1):
-                l3[5]="X"
-            elif(fault1==1):
-                l3[9]="X"
-
-            list1.remove(fault1)
+                self.l1[1]="X"
+            if(fault1==2):
+                self.l1[5]="X"
+            if(fault1==1):
+                self.l1[9]="X"
+            if(fault1==1):
+                self.l2[1]="X"
+            if(fault1==1):
+                self.l2[5]="X"
+            if(fault1==1):
+                self.l2[9]="X"
+            if(fault1==1):
+                self.l3[1]="X"
+            if(fault1==1):
+                self.l3[5]="X"
+            if(fault1==1):
+                self.l3[9]="X"
+            else:
+                print("SystemErrorrrrrrrrrr  ", fault1)
+            self.list1.remove(fault1)
             
-            design(self,l1,l2,l3,a)
+            print(self.design())
 
 
-
-
-
-            
 
 A=Tic()
-
-l1=[" "," "," ","|"," "," "," ","|"," "," "]
-l2=[" "," "," ","|"," "," "," ","|"," "," "]
-l3=[" "," "," ","|"," "," "," ","|"," "," "]
-a= "_____________"
-#A.design(l1,l2,l3,a)
+A.design()
 
 p1=0
 level=" "
 A.details(p1,level)
-print(A.details(p1))
+
+A.easy()
 
 
 
-list1=[1,2,3,4,5,6,7,8,9]
+
 
 
 
