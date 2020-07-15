@@ -204,6 +204,78 @@ class Tic:
                 print("")
                 print("")
                 print(self.design())
+                if(self.l1[1]=="O" and self.l1[5]=="O"  and self.l1[9]=="O"):
+                    print("    ",p1, "   WON  ")
+                    break
+                elif(self.l2[1]=="O" and self.l2[5]=="O"  and self.l2[9]=="O"):
+                    print("    ",p1, "   WON  ")
+                    break
+                elif(self.l3[1]=="O" and self.l3[5]=="O"  and self.l3[9]=="O"):
+                    print("    ",p1, "   WON  ")
+                    break
+                elif(self.l1[1]=="O" and self.l2[1]=="O"  and self.l3[1]=="O"):
+                    print("    ",p1, "   WON  ")
+                    break
+                elif(self.l1[5]=="O" and self.l2[5]=="O"  and self.l3[5]=="O"):
+                    print("    ",p1, "   WON  ")
+                    break
+                elif(self.l1[9]=="O" and self.l2[9]=="O"  and self.l3[9]=="O"):
+                    print("    ",p1, "   WON  ")
+                    break
+                elif(self.l1[1]=="O" and self.l2[5]=="O"  and self.l3[9]=="O"):
+                    print("    ",p1, "   WON  ")
+                    break
+                elif(self.l1[9]=="O" and self.l2[5]=="O"  and self.l3[1]=="O"):
+                    print("    ",p1, "   WON  ")
+                    break
+                else:
+                    print(" IS'S  A   DRAW ")
+                    print("---------GAME OVER---------")
+                
+                
+                
+                
+    def rules(self,p1,p2):
+        for i in range(0,4):
+            
+            print("player one ")
+            print("Enter number from  ", self.list1)              
+            
+
+            fault=int(input())
+            if fault not in self.list1:
+                print("Number not selected from list ----WORONG INPUT ")
+                print("-------GAME OVER -----------")
+                break
+            
+            
+            print("")
+            print("")
+            print("YOUR MOVE")
+            print("")
+            print("")
+
+            if(fault==1):
+                self.l1[1]="O"
+            elif(fault==2):
+                self.l1[5]="O"
+            elif(fault==3):
+                self.l1[9]="O"
+            elif(fault==4):
+                self.l2[1]="O"
+            elif(fault==5):
+                self.l2[5]="O"
+            elif(fault==6):
+                self.l2[9]="O"
+            elif(fault==7):
+                self.l3[1]="O"
+            elif(fault==8):
+                self.l3[5]="O"
+            elif(fault==9):
+                self.l3[9]="O"
+            
+            print(self.design())
+            
             if(self.l1[1]=="O" and self.l1[5]=="O"  and self.l1[9]=="O"):
                 print("    ",p1, "   WON  ")
                 break
@@ -228,18 +300,160 @@ class Tic:
             elif(self.l1[9]=="O" and self.l2[5]=="O"  and self.l3[1]=="O"):
                 print("    ",p1, "   WON  ")
                 break
-            else:
-                print(" IS'S  A   DRAW ")
-                PRINT("---------GAME OVER---------")
-                
-A=Tic()
-print("-------Plese Enter your name------")
-p2=input("")
-p1=p2.upper()
-A.design()
+            
+            
+            
+            
+            self.list1.remove(fault)
+            
+            
+            
+            print("Player two ")
+            print("Enter number from  ", self.list1)              
+            
 
+            fault=int(input())
+            if fault not in self.list1:
+                print("Number not selected from list ----WORONG INPUT ")
+                print("-------GAME OVER -----------")
+                break
+            
+            
+            print("")
+            print("")
+            print("YOUR MOVE")
+            print("")
+            print("")
 
-level=" "
-A.details(p1,level)
+            if(fault==1):
+                self.l1[1]="X"
+            elif(fault==2):
+                self.l1[5]="X"
+            elif(fault==3):
+                self.l1[9]="X"
+            elif(fault==4):
+                self.l2[1]="X"
+            elif(fault==5):
+                self.l2[5]="X"
+            elif(fault==6):
+                self.l2[9]="X"
+            elif(fault==7):
+                self.l3[1]="X"
+            elif(fault==8):
+                self.l3[5]="X"
+            elif(fault==9):
+                self.l3[9]="X"
+            
+            print(self.design())
+            
+            
+            
+            if(self.l1[1]=="X" and self.l1[5]=="X"  and self.l1[9]=="X"):
+                print("    ",p2, "   WON  ")
+                break
+            if(self.l2[1]=="X" and self.l2[5]=="X"  and self.l2[9]=="X"):
+                print("    ",p2, "   WON  ")
+                break
+            if(self.l3[1]=="X" and self.l3[5]=="X"  and self.l3[9]=="X"):
+                print("    ",p2, "   WON  ")
+                break
+            if(self.l1[1]=="X" and self.l2[1]=="X"  and self.l3[1]=="X"):
+                print("    ",p2, "   WON  ")
+                break
+            if(self.l1[5]=="X" and self.l2[5]=="X"  and self.l3[5]=="X"):
+                print("    ",p2, "   WON  ")
+                break
+            if(self.l1[9]=="X" and self.l2[9]=="X"  and self.l3[9]=="X"):
+                print("    ",p2, "   WON  ")
+                break
+            if(self.l1[1]=="X" and self.l2[5]=="X"  and self.l3[9]=="X"):
+                print("    ",p2, "   WON  ")
+                break
+            if(self.l1[9]=="X" and self.l2[5]=="X"  and self.l3[1]=="X"):
+                print("    ",p2, "   WON  ")
+                break
+            
+            self.list1.remove(fault)
+            
+            
+            if(len(self.list1)==1):
+                if(self.list1[0]==1):
+                    self.l1[1]="O"
+                elif(self.list1[0]==2):
+                    self.l1[5]="O"
+                elif(self.list1[0]==3):
+                    self.l1[9]="O"
+                elif(self.list1[0]==4):
+                    self.l2[1]="O"
+                elif(self.list1[0]==5):
+                    self.l2[5]="O"
+                elif(self.list1[0]==6):
+                    self.l2[9]="O"
+                elif(self.list1[0]==7):
+                    self.l3[1]="O"
+                elif(self.list1[0]==8):
+                    self.l3[5]="O"
+                elif(self.list1[0]==9):
+                    self.l3[9]="O"
+                    
+                print(self.design())
+                    
+                if(self.l1[1]=="O" and self.l1[5]=="O"  and self.l1[9]=="O"):
+                    print("    ",p1, "   WON  ")
+                    break
+                elif(self.l2[1]=="O" and self.l2[5]=="O"  and self.l2[9]=="O"):
+                    print("    ",p1, "   WON  ")
+                    break
+                elif(self.l3[1]=="O" and self.l3[5]=="O"  and self.l3[9]=="O"):
+                    print("    ",p1, "   WON  ")
+                    break
+                elif(self.l1[1]=="O" and self.l2[1]=="O"  and self.l3[1]=="O"):
+                    print("    ",p1, "   WON  ")
+                    break
+                elif(self.l1[5]=="O" and self.l2[5]=="O"  and self.l3[5]=="O"):
+                    print("    ",p1, "   WON  ")
+                    break
+                elif(self.l1[9]=="O" and self.l2[9]=="O"  and self.l3[9]=="O"):
+                    print("    ",p1, "   WON  ")
+                    break
+                elif(self.l1[1]=="O" and self.l2[5]=="O"  and self.l3[9]=="O"):
+                    print("    ",p1, "   WON  ")
+                    break
+                elif(self.l1[9]=="O" and self.l2[5]=="O"  and self.l3[1]=="O"):
+                    print("    ",p1, "   WON  ")
+                    break
+                else:
+                    print(" IS'S  A   DRAW ")
+                    print("---------GAME OVER---------")
+     
+  
+print("")
+print("")
+print("                   Enter 1 to play against computer")
+print("")
+print("                  Enter any number except 1 play against your friend")
+b1=int(input())
+if(b1==1):
+    A=Tic()
+    print("-------Plese Enter player  name------")
+    p3=input("")
+    p1=p3.upper()
+    A.design()
+    level=" "
+    A.details(p1,level)
+    print("currently game is available for easy level only")
+    
+    A.easy(p1)
+    
 
-A.easy(p1)
+else:
+    
+    A=Tic()
+    print("-------Plese Enter player 1 name------")
+    p3=input("")
+    p1=p3.upper()
+    print("-------Plese Enter player 2 name------")
+    p3=input("")
+    p2=p3.upper()
+    A.design()    
+    A.rules(p1,p2)
