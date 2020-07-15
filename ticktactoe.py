@@ -7,6 +7,8 @@ class Tic:
     
     
     def design(self):         # 1st fun
+        print("")
+        print("")
         for i in self.l1:
             print(i,end="")
         print("")
@@ -22,6 +24,7 @@ class Tic:
         for i in self.l3:
             print(i,end="")
         print("")
+        return "  "
         
 
        
@@ -49,33 +52,38 @@ class Tic:
 
     def easy(self):                        # 3rd fun
         #while(self.l1[1]==" " or self.l1[5]==" " or self.l1[9]==" " or self.l2[1]==" " or self.l2[5]==" " or self.l2[9]==" " or self.l3[1]==" " or self.l3[5]==" " or self.l3[9]==" " ):
-        for i in range(0,4):    
+        
+        
+            
             print("Enter number from  ", self.list1)              
             
 
             fault=int(input())
+            
+            print("")
+            print("")
+            print("YOUR MOVE")
+            print("")
+            print("")
 
             if(fault==1):
                 self.l1[1]="O"
-            if(fault==2):
-                print("asdfghgfdsasdfgh")
+            elif(fault==2):
                 self.l1[5]="O"
-            if(fault==3):
+            elif(fault==3):
                 self.l1[9]="O"
-            if(fault==4):
+            elif(fault==4):
                 self.l2[1]="O"
-            if(fault==5):
+            elif(fault==5):
                 self.l2[5]="O"
-            if(fault==6):
+            elif(fault==6):
                 self.l2[9]="O"
-            if(fault==7):
+            elif(fault==7):
                 self.l3[1]="O"
-            if(fault==8):
+            elif(fault==8):
                 self.l3[5]="O"
-            if(fault==9):
+            elif(fault==9):
                 self.l3[9]="O"
-            else:
-                print("wrong inputtttttttttttttttt" ,fault)
             
             print(self.design())
 
@@ -86,27 +94,60 @@ class Tic:
 
             if(fault1==1):
                 self.l1[1]="X"
-            if(fault1==2):
+            elif(fault1==2):
                 self.l1[5]="X"
-            if(fault1==3):
+            elif(fault1==3):
                 self.l1[9]="X"
-            if(fault1==4):
+            elif(fault1==4):
                 self.l2[1]="X"
-            if(fault1==5):
+            elif(fault1==5):
                 self.l2[5]="X"
-            if(fault1==6):
+            elif(fault1==6):
                 self.l2[9]="X"
-            if(fault1==7):
+            elif(fault1==7):
                 self.l3[1]="X"
-            if(fault1==8):
+            elif(fault1==8):
                 self.l3[5]="X"
-            if(fault1==9):
+            elif(fault1==9):
                 self.l3[9]="X"
-            else:
-                print("SystemErrorrrrrrrrrr  ", fault1)
+                
             self.list1.remove(fault1)
+            print("")
+            print("")
+            print("COMPUTER MOVE")
+            print("")
+            print("")
             
             print(self.design())
+            
+            if(len(self.list1)==1):
+                if(self.list1[0]==1):
+                    self.l1[1]="O"
+                elif(self.list1[0]==2):
+                    self.l1[5]="O"
+                elif(self.list1[0]==3):
+                    self.l1[9]="O"
+                elif(self.list1[0]==4):
+                    self.l2[1]="O"
+                elif(self.list1[0]==5):
+                    self.l2[5]="O"
+                elif(self.list1[0]==6):
+                    self.l2[9]="O"
+                elif(self.list1[0]==7):
+                    self.l3[1]="O"
+                elif(self.list1[0]==8):
+                    self.l3[5]="O"
+                elif(self.list1[0]==9):
+                    self.l3[9]="O"
+                print("")
+                print("")
+                print("FINAL MOVE")
+                print("")
+                print("")
+                print(self.design())
+            else:
+                pass
+                
 
 
 
