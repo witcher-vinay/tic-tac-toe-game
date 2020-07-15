@@ -29,8 +29,8 @@ class Tic:
 
        
     def details(self,p1,level):
-        print("-------Plese Enter your name------")               # 2nf fun
-        p1=input("")
+        print("")
+        print("")
         print("""-------Select Level you want to play---------
                 Enter 1 for  ----- Easy
                 Enter 2 for  ----- Medium
@@ -50,15 +50,20 @@ class Tic:
     list1=[1,2,3,4,5,6,7,8,9]
 
 
-    def easy(self):                        # 3rd fun
+    def easy(self,p1):                        # 3rd fun
         #while(self.l1[1]==" " or self.l1[5]==" " or self.l1[9]==" " or self.l2[1]==" " or self.l2[5]==" " or self.l2[9]==" " or self.l3[1]==" " or self.l3[5]==" " or self.l3[9]==" " ):
-        
-        
+        for i in range(0,4):
+            
             
             print("Enter number from  ", self.list1)              
             
 
             fault=int(input())
+            if fault not in self.list1:
+                print("Number not selected from list ----WORONG INPUT ")
+                print("-------GAME OVER -----------")
+                break
+            
             
             print("")
             print("")
@@ -86,6 +91,33 @@ class Tic:
                 self.l3[9]="O"
             
             print(self.design())
+            
+            
+            
+            if(self.l1[1]=="O" and self.l1[5]=="O"  and self.l1[9]=="O"):
+                print("    ",p1, "   WON  ")
+                break
+            elif(self.l2[1]=="O" and self.l2[5]=="O"  and self.l2[9]=="O"):
+                print("    ",p1, "   WON  ")
+                break
+            elif(self.l3[1]=="O" and self.l3[5]=="O"  and self.l3[9]=="O"):
+                print("    ",p1, "   WON  ")
+                break
+            elif(self.l1[1]=="O" and self.l2[1]=="O"  and self.l3[1]=="O"):
+                print("    ",p1, "   WON  ")
+                break
+            elif(self.l1[5]=="O" and self.l2[5]=="O"  and self.l3[5]=="O"):
+                print("    ",p1, "   WON  ")
+                break
+            elif(self.l1[9]=="O" and self.l2[9]=="O"  and self.l3[9]=="O"):
+                print("    ",p1, "   WON  ")
+                break
+            elif(self.l1[1]=="O" and self.l2[5]=="O"  and self.l3[9]=="O"):
+                print("    ",p1, "   WON  ")
+                break
+            elif(self.l1[9]=="O" and self.l2[5]=="O"  and self.l3[1]=="O"):
+                print("    ",p1, "   WON  ")
+                break
 
 
             self.list1.remove(fault)
@@ -120,6 +152,33 @@ class Tic:
             
             print(self.design())
             
+            
+            if(self.l1[1]=="X" and self.l1[5]=="X"  and self.l1[9]=="X"):
+                print("  COMPUTER WON ")
+                break
+            if(self.l2[1]=="X" and self.l2[5]=="X"  and self.l2[9]=="X"):
+                print("  COMPUTER WON ")
+                break
+            if(self.l3[1]=="X" and self.l3[5]=="X"  and self.l3[9]=="X"):
+                print("  COMPUTER WON ")
+                break
+            if(self.l1[1]=="X" and self.l2[1]=="X"  and self.l3[1]=="X"):
+                print("  COMPUTER WON ")
+                break
+            if(self.l1[5]=="X" and self.l2[5]=="X"  and self.l3[5]=="X"):
+                print("  COMPUTER WON ")
+                break
+            if(self.l1[9]=="X" and self.l2[9]=="X"  and self.l3[9]=="X"):
+                print("  COMPUTER WON ")
+                break
+            if(self.l1[1]=="X" and self.l2[5]=="X"  and self.l3[9]=="X"):
+                print("  COMPUTER WON ")
+                break
+            if(self.l1[9]=="X" and self.l2[5]=="X"  and self.l3[1]=="X"):
+                print("  COMPUTER WON  ")
+                break
+            
+            
             if(len(self.list1)==1):
                 if(self.list1[0]==1):
                     self.l1[1]="O"
@@ -145,26 +204,43 @@ class Tic:
                 print("")
                 print("")
                 print(self.design())
-            else:
-                pass
                 
-
-
-
+                if(self.l1[1]=="O" and self.l1[5]=="O"  and self.l1[9]=="O"):
+                    print("                PYAYER WON        ")
+                    break
+                elif(self.l2[1]=="O" and self.l2[5]=="O"  and self.l2[9]=="O"):
+                    print("                PYAYER WON        ")
+                    break
+                elif(self.l3[1]=="O" and self.l3[5]=="O"  and self.l3[9]=="O"):
+                    print("                PYAYER WON        ")
+                    break
+                elif(self.l1[1]=="O" and self.l2[1]=="O"  and self.l3[1]=="O"):
+                    print("                PYAYER WON        ")
+                    break
+                elif(self.l1[5]=="O" and self.l2[5]=="O"  and self.l3[5]=="O"):
+                    print("                PYAYER WON        ")
+                    break
+                elif(self.l1[9]=="O" and self.l2[9]=="O"  and self.l3[9]=="O"):
+                    print("                PYAYER WON        ")
+                    break
+                elif(self.l1[1]=="O" and self.l2[5]=="O"  and self.l3[9]=="O"):
+                    print("                PYAYER WON        ")
+                    break
+                elif(self.l1[9]=="O" and self.l2[5]=="O"  and self.l3[1]=="O"):
+                    print("                PYAYER WON        ")
+                    break
+                else:
+                    print(" IS'S  A   DRAW ")
+                    PRINT("---------GAME OVER---------")
+                
 A=Tic()
+print("-------Plese Enter your name------")
+p2=input("")
+p1=p2.upper()
 A.design()
 
-p1=0
+
 level=" "
 A.details(p1,level)
 
-A.easy()
-
-
-
-
-
-
-
-
-    
+A.easy(p1)
