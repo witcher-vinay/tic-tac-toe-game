@@ -60,19 +60,19 @@ class Tic:
             if(fault==2):
                 print("asdfghgfdsasdfgh")
                 self.l1[5]="O"
-            if(fault==1):
+            if(fault==3):
                 self.l1[9]="O"
-            if(fault==1):
+            if(fault==4):
                 self.l2[1]="O"
-            if(fault==1):
+            if(fault==5):
                 self.l2[5]="O"
-            if(fault==1):
+            if(fault==6):
                 self.l2[9]="O"
-            if(fault==1):
+            if(fault==7):
                 self.l3[1]="O"
-            if(fault==1):
+            if(fault==8):
                 self.l3[5]="O"
-            if(fault==1):
+            if(fault==9):
                 self.l3[9]="O"
             else:
                 print("wrong inputtttttttttttttttt" ,fault)
@@ -88,19 +88,19 @@ class Tic:
                 self.l1[1]="X"
             if(fault1==2):
                 self.l1[5]="X"
-            if(fault1==1):
+            if(fault1==3):
                 self.l1[9]="X"
-            if(fault1==1):
+            if(fault1==4):
                 self.l2[1]="X"
-            if(fault1==1):
+            if(fault1==5):
                 self.l2[5]="X"
-            if(fault1==1):
+            if(fault1==6):
                 self.l2[9]="X"
-            if(fault1==1):
+            if(fault1==7):
                 self.l3[1]="X"
-            if(fault1==1):
+            if(fault1==8):
                 self.l3[5]="X"
-            if(fault1==1):
+            if(fault1==9):
                 self.l3[9]="X"
             else:
                 print("SystemErrorrrrrrrrrr  ", fault1)
