@@ -6,5 +6,5 @@
 anyone who have install python-3 on their device can play this game
 no third party libraries
 
-********  TRY AND HAVE FUN *********8888
+********  TRY AND HAVE FUN *********
 
