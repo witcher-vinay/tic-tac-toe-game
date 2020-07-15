@@ -204,31 +204,30 @@ class Tic:
                 print("")
                 print("")
                 print(self.design())
-                
-                if(self.l1[1]=="O" and self.l1[5]=="O"  and self.l1[9]=="O"):
-                    print("                PYAYER WON        ")
-                    break
-                elif(self.l2[1]=="O" and self.l2[5]=="O"  and self.l2[9]=="O"):
-                    print("                PYAYER WON        ")
-                    break
-                elif(self.l3[1]=="O" and self.l3[5]=="O"  and self.l3[9]=="O"):
-                    print("                PYAYER WON        ")
-                    break
-                elif(self.l1[1]=="O" and self.l2[1]=="O"  and self.l3[1]=="O"):
-                    print("                PYAYER WON        ")
-                    break
-                elif(self.l1[5]=="O" and self.l2[5]=="O"  and self.l3[5]=="O"):
-                    print("                PYAYER WON        ")
-                    break
-                elif(self.l1[9]=="O" and self.l2[9]=="O"  and self.l3[9]=="O"):
-                    print("                PYAYER WON        ")
-                    break
-                elif(self.l1[1]=="O" and self.l2[5]=="O"  and self.l3[9]=="O"):
-                    print("                PYAYER WON        ")
-                    break
-                elif(self.l1[9]=="O" and self.l2[5]=="O"  and self.l3[1]=="O"):
-                    print("                PYAYER WON        ")
-                    break
+            if(self.l1[1]=="O" and self.l1[5]=="O"  and self.l1[9]=="O"):
+                print("    ",p1, "   WON  ")
+                break
+            elif(self.l2[1]=="O" and self.l2[5]=="O"  and self.l2[9]=="O"):
+                print("    ",p1, "   WON  ")
+                break
+            elif(self.l3[1]=="O" and self.l3[5]=="O"  and self.l3[9]=="O"):
+                print("    ",p1, "   WON  ")
+                break
+            elif(self.l1[1]=="O" and self.l2[1]=="O"  and self.l3[1]=="O"):
+                print("    ",p1, "   WON  ")
+                break
+            elif(self.l1[5]=="O" and self.l2[5]=="O"  and self.l3[5]=="O"):
+                print("    ",p1, "   WON  ")
+                break
+            elif(self.l1[9]=="O" and self.l2[9]=="O"  and self.l3[9]=="O"):
+                print("    ",p1, "   WON  ")
+                break
+            elif(self.l1[1]=="O" and self.l2[5]=="O"  and self.l3[9]=="O"):
+                print("    ",p1, "   WON  ")
+                break
+            elif(self.l1[9]=="O" and self.l2[5]=="O"  and self.l3[1]=="O"):
+                print("    ",p1, "   WON  ")
+                break
                 else:
                     print(" IS'S  A   DRAW ")
                     PRINT("---------GAME OVER---------")
