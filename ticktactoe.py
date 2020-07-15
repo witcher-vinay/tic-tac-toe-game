@@ -228,9 +228,9 @@ class Tic:
             elif(self.l1[9]=="O" and self.l2[5]=="O"  and self.l3[1]=="O"):
                 print("    ",p1, "   WON  ")
                 break
-                else:
-                    print(" IS'S  A   DRAW ")
-                    PRINT("---------GAME OVER---------")
+            else:
+                print(" IS'S  A   DRAW ")
+                PRINT("---------GAME OVER---------")
                 
 A=Tic()
 print("-------Plese Enter your name------")
